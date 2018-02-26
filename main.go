@@ -1,14 +1,16 @@
 package main
 
-import (
-	"fmt"
-)
-
-var flagvar string
-
 func main() {
-	h := Help{}
-	h.run()
+	cm := CommandManager{}
+	cm.init()
+	var c ICommand
+	c = &CommandInit{}
+	c.build("init", "Initialize dev enviroments")
+	c.addOption("f", "force")
+	cm.addCommand(c)
+	cm.run()
 
-	fmt.Println(h.Name)
+	//h := Help{}
+	//h.run()
+	//fmt.Println(h.ProjectName)
 }

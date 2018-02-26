@@ -87,7 +87,7 @@ func (h Help) handleInitCommand() {
 func (h Help) handleInstallCommand() {
 	flag.StringVar(&h.ProjectName, "p", "", "project")
 	flag.StringVar(&h.ProjectName, "project-name", "", "project")
-	if h.Name == "" {
+	if h.ProjectName == "" {
 		h.showHelpInstallCommand()
 		os.Exit(1)
 	}
