@@ -1,3 +1,1 @@
-# devenv
-NOT Operational yet
-personal utility to manage my dev environment
+# devenvI conserve this repository only to rember base about golang
